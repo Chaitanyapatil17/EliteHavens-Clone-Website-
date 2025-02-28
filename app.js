@@ -89,16 +89,13 @@ app.post("/listings/:id/reviews", async (req, res) => {
   await newReview.save();
   await listing.save();
 
-  console.log("Review was saved");
-  res.send("Review was saved");
-
   res.redirect(`/listings/${listing._id}`);
 });
 
 
 // app.get("/testListing", async (req, res) => {
 //   let sampleListing = new Listing({
-//     title: "My New Villa",
+//     title: "My New Villa", 
 //     description: "By the beach",
 //     price: 1200,
 //     location: "Calangute, Goa",
